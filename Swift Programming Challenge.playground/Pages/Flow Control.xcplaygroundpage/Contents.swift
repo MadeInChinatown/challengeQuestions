@@ -31,7 +31,7 @@ func clapsPerNum(_ num: Int) -> Int {
 func containsThree(_ num: Int) -> Int {
     return "\(num)".filter { $0 == "3" }.count
 }
-/*
+/**
  #### Challenge 1:
  ### Clap Game
  
@@ -56,6 +56,42 @@ func clapGame(upperLimit: Int) {
     // HINT: Loop and use the helper functions!
 }
 
+// MARK: - Tests - These should pass 👍
+func checkGame() {
+    let testCases: [Int: Int] = [
+        0: 0,
+        1: 0,
+        2: 0,
+        3: 1,
+        10: 0,
+        12: 1,
+        13: 1,
+        33: 3,
+        35: 1,
+        36: 2,
+        42: 1,
+        50: 0,
+        5232: 2
+    ]
+    
+    var fail = false
+    for testCase in testCases {
+        let numClaps = clapsPerNum(testCase.key)
+        if numClaps != testCase.value {
+            fail = true
+            print("\(testCase.key) should clap \(testCase.value) times, not \(numClaps) times!")
+        }
+    }
+    
+    if fail == false {
+        print("SUCCESS!")
+    }
+}
+
+/**
+ #### Run this line on order to check your work!
+ */
+checkGame()
 
 
 /*
