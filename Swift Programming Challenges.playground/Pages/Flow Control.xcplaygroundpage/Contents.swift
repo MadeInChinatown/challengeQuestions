@@ -3,10 +3,9 @@
 
 /**
  For example:
-    0 - ~nothing~
     1 - ~nothing~
     2 - ~nothing~
-    3 - 1x "clap"
+    3 - 2x "clap"
     4 - ~nothing~
     ...
     13 - 1x "clap"
@@ -17,8 +16,15 @@ func clapsPerNum(_ num: Int) -> Int {
     
     // TODO!
     // HINT: Use the provided containsThree(:) function 😀
+    var numClaps = 0
     
-    return 0
+    if num % 3 == 0 {
+        numClaps += 1
+    }
+    
+    numClaps += containsThree(num)
+    
+    return numClaps
 }
 /**
  * Returns number of 3's in an integer
@@ -31,6 +37,13 @@ func clapsPerNum(_ num: Int) -> Int {
 func containsThree(_ num: Int) -> Int {
     return "\(num)".filter { $0 == "3" }.count
 }
+
+/**
+ * Returns `true` if the number is divisible by 3.  Returns `false` if the number is NOT divisible by 3
+ */
+func isDivisibleByThree(_ num: Int) -> Bool {
+    return num % 3 == 0
+}
 /**
  #### Challenge 1:
  ### Clap Game
@@ -42,7 +55,7 @@ func containsThree(_ num: Int) -> Int {
  Print the following (as an example, ignore the dots):
  1: 0
  2: 0
- 3: 1
+ 3: 2
  4: 0
  5: 0
  6: 1
@@ -62,7 +75,7 @@ func checkGame() {
         0: 0,
         1: 0,
         2: 0,
-        3: 1,
+        3: 2,
         10: 0,
         12: 1,
         13: 1,

@@ -3,5 +3,6 @@
     <pages>
         <page name='Types and Operations'/>
         <page name='Flow Control'/>
+        <page name='2019_10_13_Simon_Says'/>
     </pages>
 </playground>
