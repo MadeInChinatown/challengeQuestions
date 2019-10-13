@@ -52,6 +52,7 @@ func testGame() {
     let testCases = [
         "\(instructionText) Clap your hands!": true,
         "Clap your hands! \(instructionText)": false,
+        "Rosa says touch your nose!": false,
         "Simon clap your hands!": false,
         "Says Clap your hands!": false,
         "Clap your hands Simon": false,
@@ -59,6 +60,7 @@ func testGame() {
         "\(instructionText)": false,
         "Simon": false,
         "Says sdflkjsdf": false,
+        "": false,
     ]
     
     var testsPassed = true
