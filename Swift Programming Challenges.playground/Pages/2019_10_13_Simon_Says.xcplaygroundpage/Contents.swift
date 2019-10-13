@@ -67,8 +67,8 @@ func testGame() {
     testCases.forEach {
         if simonSays($0.key) == $0.value {
             print("✅ Pass for \($0.key)")
-            testsPassed = false
         } else {
+            testsPassed = false
             print("❌ Fail for \($0.key) - check your work!")
         }
     }
