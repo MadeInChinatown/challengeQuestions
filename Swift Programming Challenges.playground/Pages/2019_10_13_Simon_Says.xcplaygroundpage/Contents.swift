@@ -45,6 +45,10 @@ func simonSays(_ instruction: String) -> Bool {
 ===============================================================
  */
 func testGame() {
+    print("==================================")
+    print("Starting game!")
+    print("==================================")
+    
     let testCases = [
         "\(instructionText) Clap your hands!": true,
         "Clap your hands! \(instructionText)": false,
@@ -60,18 +64,24 @@ func testGame() {
     var testsPassed = true
     testCases.forEach {
         if simonSays($0.key) == $0.value {
-            print("Pass for \($0.key)")
+            print("✅ Pass for \($0.key)")
             testsPassed = false
         } else {
-            print("Fail for \($0.key) - check your work!")
+            print("❌ Fail for \($0.key) - check your work!")
         }
     }
+    
+    print("==================================")
     
     if testsPassed {
         print("ALL PASSED - nice! 👍")
     } else {
         print("Some wrong answers - try again!")
     }
+    
+    print("==================================")
+    print("End game")
+    print("==================================")
 }
 
 /**
