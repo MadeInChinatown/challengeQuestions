@@ -61,27 +61,27 @@ func testGame() {
     print("==================================")
     
     let testCases = [
-        "\(instructionText) Clap your hands!": true,
-        "Clap your hands! \(instructionText)": false,
-        "Simon says touch your nose!": false,
-        "Simon clap your hands!": false,
-        "Says Clap your hands!": false,
-        "Clap your hands Simon": false,
-        "\(instructionText)clap your hands": false,
-        "\(instructionText)": false,
-        "\(instructionText) Touch your nose!": true,
-        "Rosa": false,
-        "Says sdflkjsdf": false,
-        "": false,
+        (input: "\(instructionText) Clap your hands!", output: true),
+        (input: "Clap your hands! \(instructionText)", output: false),
+        (input: "Simon says touch your nose!", output: false),
+        (input: "Simon clap your hands!", output: false),
+        (input: "Says Clap your hands!", output: false),
+        (input: "Clap your hands Simon", output:false),
+        (input: "\(instructionText)clap your hands", output:false),
+        (input: "\(instructionText)", output:false),
+        (input: "\(instructionText) Touch your nose!", output: true),
+        (input: "Rosa", output: false),
+        (input: "Says sdflkjsdf", output: false),
+        (input: "", output: false)
     ]
     
     var testsPassed = true
     testCases.forEach {
-        if rosaSays($0.key) == $0.value {
-            print("✅ Pass for \($0.key)")
+        if rosaSays($0.input) == $0.output {
+            print("✅ Pass for \($0.input)")
             testsPassed = false
         } else {
-            print("❌ Fail for \($0.key) - check your work!")
+            print("❌ Fail for \($0.input) - check your work!")
         }
     }
     
