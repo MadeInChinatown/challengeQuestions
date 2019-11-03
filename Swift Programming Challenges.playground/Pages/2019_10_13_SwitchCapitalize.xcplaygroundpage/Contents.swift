@@ -12,10 +12,10 @@ import Foundation
 func swtichCapital(_ str: String) -> String {
     var solution = ""
     for char in Array(str) {
-        if char.isUpperCase {
-            solution += char.upperCased()
+        if char.isUppercase {
+            solution += char.uppercased()
         } else {
-            solution += char.lowercase()
+            solution += char.lowercased()
         }
     }
     
@@ -34,7 +34,7 @@ func test() {
      
      var testsPassed = true
      testCases.forEach {
-         if simonSays($0.key) == $0.value {
+         if swtichCapital($0.key) == $0.value {
              print("✅ Pass for \($0.key)")
          } else {
              testsPassed = false
