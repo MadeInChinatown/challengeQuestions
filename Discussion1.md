@@ -99,11 +99,13 @@ The block of code literally means while the conditional clause evaluates to `tru
 
 ```swift
 func countdown(_ x: Int) {
-  while (x > 0) {
-    print(x)
-    x = x - 1
-  }
-  print("Blastoff!")
+    var currX = x
+    while (currX > 0) {
+        print(currX)
+        currX = currX - 1
+        delay(1)
+    }
+    print("Blastoff!")
 }
 countdown(3) // What will this line print?
 ```
