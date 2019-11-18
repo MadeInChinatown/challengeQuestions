@@ -103,7 +103,6 @@ func countdown(_ x: Int) {
     while (currX > 0) {
         print(currX)
         currX = currX - 1
-        delay(1)
     }
     print("Blastoff!")
 }
