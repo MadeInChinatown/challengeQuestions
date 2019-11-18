@@ -1,10 +1,10 @@
 # Discussion 1: Expressions, Statements, and Functions
 
-> Follow us on Instagram at @swift.learn !  Learn more about Swift with our guided content. We want to help you learn Swift if you've never written a single line of code or if you're a seasoned veteran.  Check us out!
+> Follow us on Instagram at [@swift.learning](https://www.instagram.com/swift.learning/) !  Learn more about Swift with our guided content. We want to help you learn Swift if you've never written a single line of code or if you're a seasoned veteran.  Check us out!
 
 ## Warm Up - What Would Swift Do?
 
-```
+```swift
 var x = 6
 
 func square(_ x: Int) {
@@ -20,7 +20,7 @@ max(2*2, square(-5)) - square(4) // What will be returned at this line?
 
 A *primitive expression* is a single evaluation step: you either look up the value of a name, or take the literal value.  For example, numbers, variables names, and strings are all primitive expressions.
 
-```
+```swift
 2
 
 "Hello World"
@@ -30,7 +30,7 @@ A *primitive expression* is a single evaluation step: you either look up the val
 
 1. Determine the result of evaluating `f(4)` in Swift if the following funtions are defined.
 
-```
+```swift
 func double(_ x: Int) -> Int {
   return x + x
 }
@@ -46,7 +46,7 @@ func f(_ z: Int) -> Int {
 
 2. What will Swift print?
 
-```
+```swift
 func a() -> String {
   print("a")
   return "hello"
@@ -65,7 +65,7 @@ print(b())
 
 1. Conditional statements allow programs to execute different lines of code depending on the current state.  A typical if-else
  set of statements will have the following structure:
-```
+```swift
 if <conditional expression> {
   <statements>
 } else if <conditional expression> {
@@ -79,7 +79,7 @@ The *else* and *else if* are optional and you can have any number of *else if* s
 
 1. Write a simple function that takes in one input *x*, whose value is guaranteed to be between 0 and 100.  If `x` >= 75, then print "Q1".  If 50 <= x < 75 then print "Q2".  If 25 <= x < 50 then print "Q3".  If x < 25 then print "Q4".
 
-```
+```swift
 func findQuartile(_ x: Int) {
   // YOUR CODE HERE
 }
@@ -89,7 +89,7 @@ func findQuartile(_ x: Int) {
 
 Using conditional statements we can ignore statements.  On the other hand using iteration we can repeat statements multiple times.  A common iterative block of code is the while statement.  The structure is as follows:
 
-```
+```swift
 while <conditional statement> {
   <body of statement>
 }
@@ -97,7 +97,7 @@ while <conditional statement> {
 
 The block of code literally means while the conditional clause evaluates to `true`, execute the body of statements over and over.
 
-```
+```swift
 func countdown(_ x: Int) {
   while (x > 0) {
     print(x)
@@ -110,7 +110,7 @@ countdown(3) // What will this line print?
 
 What do you think Swift will print for the following? `om` and `nom` are defined as follows:
 
-```
+```swift
 func om(_ foo: Int) -> Int {
   return -foo
 }
