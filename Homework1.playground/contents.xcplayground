@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='Sum A and ABS B'/>
+        <page name='Two Of Three'/>
+        <page name='Hailstone'/>
+        <page name='References'/>
+    </pages>
+</playground>
